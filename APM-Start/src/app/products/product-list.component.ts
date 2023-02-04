@@ -88,5 +88,7 @@ export class ProductListComponent implements OnInit {
         selected = selected.toLocaleLowerCase();
         return this.products.filter((product : IProduct) => product.productName.toLocaleLowerCase().includes(selected));
       }
-
+      onClick(message : string){
+        this.pageTitle = 'Product List: '  + message;
+      }
 }
